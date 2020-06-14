@@ -1,14 +1,26 @@
 {
-  "jobs" : [ {
-    "alias" : "unknown",
-    "connectionString" : "s7://192.168.167.210/0/0",
-    "scrapeRateMs" : 5000,
-    "fieldAdresses" : {
-      "temp" : "%DB444:0.0:REAL",
-      "invalid": "%DB55555:0.0:REAL"
+  "jobs": [
+    {
+      "alias": "siemens",
+      "connectionString": "s7://192.168.167.210/0/0",
+      "scrapeRateMs": 5000,
+      "fieldAdresses": {
+        "temp": "%DB444:0.0:REAL",
+        "invalid": "%DB55555:0.0:REAL"
+      }
+    },
+    {
+      "alias": "opc",
+      "connectionString": "opcua:tcp://localhost:53530/OPCUA/SimulationServer?discovery=false",
+      "scrapeRateMs": 1000,
+      "fieldAdresses": {
+        "counter": "ns=3;s=Counter"
+      }
     }
-  } ],
-  "kafka" : {
-    "bootstrapServers" : [ "localhost:9092" ]
+  ],
+  "kafka": {
+    "bootstrapServers": [
+      "localhost:9092"
+    ]
   }
 }
