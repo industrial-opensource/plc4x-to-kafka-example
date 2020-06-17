@@ -12,7 +12,7 @@
         <jackson.version>2.10.3</jackson.version>
         <junit.version>5.6.1</junit.version>
         <slf4j.version>1.7.30</slf4j.version>
-        <plc4j.version>0.6.0</plc4j.version>
+        <plc4j.version>0.6.1-SNAPSHOT</plc4j.version>
         <main-class>de.pragmaticminds.example.plc4x.Application</main-class>
     </properties>
 
